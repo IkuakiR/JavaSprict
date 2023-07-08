@@ -1,4 +1,4 @@
-"use strice";
+"use strict";
 
 console.log("1");
 console.log(1);
@@ -27,11 +27,26 @@ const btn = document.getElementById("btn");
 
 const ans = document.getElementById("ans");
 
+const cal = document.getElementById("cal");
+
 btn.addEventListener("click", () => {
     // ansのvalにnum1のvalを表示
-    console.log(num1.value);
-    console.log(num2.value);
-    ans.value = Number(num1.value) + Number(num2.value)
+    // console.log("cal:", cal.value);
+    console.log("num1:", num1.value);
+    console.log("num2:" + num2.value);
+    // ans.value = Number(num1.value) + Number(num2.value)
+    if (cal = "add") {
+        ans.value = Number(num1.value) + Number(num2.value);
+    }
+    if (cal = "sub") {
+        ans.value = Number(num1.value) - Number(num2.value);
+    }
+    if (cal = "mul") {
+        ans.value = Number(num1.value) * Number(num2.value);
+    }
+    if (cal = "divi") {
+        ans.value = Number(num1.value) / Number(num2.value);
+    }
 });
 
 console.log(ans.value);
