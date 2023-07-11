@@ -35,19 +35,25 @@ btn.addEventListener("click", () => {
     console.log("num1:", num1.value);
     console.log("num2:" + num2.value);
     // ans.value = Number(num1.value) + Number(num2.value)
-    if (cal = "add") {
+    if (cal.value == "add") {
         ans.value = Number(num1.value) + Number(num2.value);
     }
-    if (cal = "sub") {
+    else if (cal.value == "sub") {
         ans.value = Number(num1.value) - Number(num2.value);
     }
-    if (cal = "mul") {
+    else if (cal.value == "mul") {
         ans.value = Number(num1.value) * Number(num2.value);
     }
-    if (cal = "divi") {
-        ans.value = Number(num1.value) / Number(num2.value);
+    else if (cal.value == "divi") {
+        if (Number(num1.value) == 0) {
+            ans.value = "divisor cannot be 0";
+            // console.log(ans.value);
+        }else {
+            ans.value = Number(num1.value) / Number(num2.value);
+            // console.log(ans.value);
+        }
+    }
+    else {
+
     }
 });
-
-console.log(ans.value);
-
